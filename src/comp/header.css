@@ -1,6 +1,14 @@
 /* ==================
     3. header of mobile
 ===================== */
+/*new code header*/
+
+.hide-when-mobile.ali,.show-when-mobile.ali{
+  background-color: rgb(12, 65, 47);
+}
+
+
+
 .show-when-mobile {
   display: none;
 }

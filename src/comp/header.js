@@ -6,7 +6,7 @@ const Header = () => {
     <div className="ali">
       
       <header className="hide-when-mobile ali">
-        <h1>  <Link to="/">c4a***</Link></h1>
+        <h1>  <Link to="/">C4a.be</Link></h1>
         <ul className="flex">
           <li className="main-list">
             <NavLink className="main-link" to="/html">
@@ -63,7 +63,7 @@ const Header = () => {
           </li>
         </ul>
       </header>
-      <header style={{ backgroundColor: "red" }} className="show-when-mobile ali">
+      <header  className="show-when-mobile ali">
         <h1>c4a***</h1>
         <label className="absolute" htmlFor="burger">
           <i className="fas fa-bars" />

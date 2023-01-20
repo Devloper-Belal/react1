@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div >
       <footer className="ali">
-        DDDesigned and developed by Belal-balasmeh
+        Designed and developed by Belal-balasmeh
         <span>&#129505;</span>
       </footer>
     </div>
