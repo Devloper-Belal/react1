@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import {   HelmetProvider } from "react-helmet-async";
+import * as serviceworkerRigestration from './serviceWorkerRegistration';
+
 
 //import App from './App';
 import {
@@ -43,3 +45,4 @@ root.render(
   </React.StrictMode>
 );
 
+serviceworkerRigestration.register();

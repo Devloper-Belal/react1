@@ -64,7 +64,7 @@ const Header = () => {
         </ul>
       </header>
       <header  className="show-when-mobile ali">
-        <h1>c4a***</h1>
+        <h1><Link to="/">C4a.be</Link> </h1>
         <label className="absolute" htmlFor="burger">
           <i className="fas fa-bars" />
         </label>
