@@ -4,7 +4,10 @@ import Footer from "../comp/footer";
 import Maincontant from "../comp/maincontant";
 import { Helmet } from "react-helmet-async";
 
+
+
 const Home = () => {
+  
   return (
     <>
     <Helmet>
@@ -12,9 +15,12 @@ const Home = () => {
         <meta name="description" content="home page" />
       
       </Helmet>
-  <Header/>
-  <Maincontant pag="home"  designer="develoepr-belal"/>
-      <Footer/>
+
+  <div >
+    <Header/>
+    <Maincontant pag="home"  designer="develoepr-belal"/>
+        <Footer/>
+  </div>
     </>
   );
 };

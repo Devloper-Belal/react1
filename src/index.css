@@ -10,3 +10,56 @@ body {
 .app{
   text-align: center;
 }
+/* ==========================
+Level2 (Sign-in - Sign-up)
+=============================*/
+form{
+  display: flex;
+  flex-direction: column;
+}
+input{
+  margin-bottom: 18px;
+  padding: 6px 4px;
+  border: 1px solid #607d8b;
+  border-radius: 5px;
+  color: #000;
+  font-size: 16px;
+}
+
+form button {
+  padding: 8px 12px;
+  background-color: teal;
+  border-radius: 5px;
+  color: #000;
+  font-size: 16px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.account{
+  font-size: 16px;
+  margin-top: 12px;
+  font-weight: 100;
+}
+
+.account a{
+  text-decoration:underline;
+  font-weight: 600;
+  color: #00c6c6;
+  font-size: 18px;
+}
+
+.light form p {
+  color: rgb(0, 0, 0);
+}
+
+
+form button:active{
+scale: 0.9;
+border-radius: 0;
+cursor: pointer;
+}
+.psup{
+  font-size: 15px;
+}
