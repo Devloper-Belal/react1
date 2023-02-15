@@ -2,38 +2,77 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./header.css";
 import "../theme.css";
-import {useContext } from "react";
+import { useContext } from "react";
 import ThemeContext from "../context/ThemeContext";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../firbase/config";
+import {  signOut } from "firebase/auth";
 const Header = () => {
-  const {changeLight,theme,} = useContext(ThemeContext);
+  const [user, loading, error] = useAuthState(auth);
+  const { changeLight, theme } = useContext(ThemeContext);
   return (
     <div className="ali">
+    
       <header className="hide-when-mobile ali">
         <h1>
-          
           <Link to="/">C4a.be</Link>
         </h1>
-        <button onClick={()=>changeLight(theme==="light" ?"darck":"light")}className="theme-btn" type="button">
-        {theme}  
+        <button
+          onClick={() => changeLight(theme === "light" ? "darck" : "light")}
+          className="theme-btn"
+          type="button"
+        >
+          {theme}
         </button>
-      
-        
-      
+
         <ul className="flex">
-          <li className="main-list">
-            <NavLink className="main-link" to="/signin">
-            sign-in 
+          {!user && (
+            <li className="main-list">
+              <NavLink className="main-link" to="/signin">
+                sign-in
+              </NavLink>
+            </li>
+          )}
+
+          {!user && (
+            <li className="main-list">
+              <NavLink className="main-link" to="/signup">
+                sign-up
+              </NavLink>
+            </li>
+          )}
+
+          {user && (
+            <li
+              onClick={() =>
+                signOut(auth)
+                  .then(() => {
+                    // Sign-out successful.
+                  })
+                  .catch((error) => {
+                    // An error happened.
+                  })
+              }
+              className="main-list"
+            >
+              <NavLink className="main-link">sign-out</NavLink>
+            </li>
+          )}
+   
+
+  { user && <li className="main-list">
+            <NavLink className="main-link" to="/html">
+              HTML
             </NavLink>
-          
-          </li>
+            <ul className="sub-ul sub-of-js">
+              <li>
+                <a href>coming soon🔥</a>
+              </li>
+            </ul>
+          </li>}
+
+
           <li className="main-list">
-            <NavLink className="main-link" to="/signup">
-            sign-up
-            </NavLink>
-          
-          </li>
-          <li className="main-list">
-          
             <NavLink className="main-link" to="/java">
               JavaScript
             </NavLink>
